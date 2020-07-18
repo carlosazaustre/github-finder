@@ -1,23 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-export const UserItem = () => {
-  const [profile, setProfile] = useState({
-    id: 1,
-    login: 'mojombo',
-    avatar_url: 'https://avatars0.githubusercontent.com/u/1?v=4',
-    html_url: 'https://github.com/mojombo',
-  });
+export const UserItem = ({ user }) => {
+  const { login, avatar_url, html_url } = user;
 
   return (
     <div className="card text-center">
       <img
-        src={profile.avatar_url}
+        src={avatar_url}
         className="round-img"
         style={{ width: '60px' }}
       />
-      <h3>{profile.login}</h3>
+      <h3>{login}</h3>
       <div>
-        <a href={profile.html_url} className="btn btn-dark btn-sm my-1">
+        <a href={html_url} className="btn btn-dark btn-sm my-1">
           More
         </a>
       </div>

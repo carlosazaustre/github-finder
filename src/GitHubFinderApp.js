@@ -1,13 +1,15 @@
 import React from 'react';
 
 import { Navbar } from './components/layout/Navbar';
-import { UserItem } from './components/users/UserItem';
+import { Users } from './components/users/Users';
 
 export const GitHubFinderApp = () => {
   return (
     <div className="App">
       <Navbar title='GitHub Finder' icon='fab fa-github' />
-      <UserItem />
+      <div className="container">
+        <Users />
+      </div>
     </div>
   );
 }
