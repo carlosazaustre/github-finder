@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export const Navbar = ({
   title = 'GitHub Finder',
@@ -11,4 +12,9 @@ export const Navbar = ({
       </div>
     </nav>
   )
+}
+
+Navbar.propTypes = {
+  title: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
 }
